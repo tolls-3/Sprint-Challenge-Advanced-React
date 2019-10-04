@@ -91,7 +91,9 @@
   justify-content: center;
   margin-top: 10px;
 }
-
+.playercard :hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 .playercard2 {
   width: 50%;
   padding: 20px;
@@ -103,9 +105,10 @@
   margin-bottom: 30px;
   align-items: center;
 }
-:hover {
+
+.playercard2 :hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-h3 {
+.playercard2 h3 {
   font-size: 1.4rem;
 }
