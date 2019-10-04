@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Icon } from "semantic-ui-react";
 
 
-const PlayersCard = ({ key, name, country, searches }) => {
+const PlayersCard = ({ name, country, searches }) => {
   return (
     <div className="playercard">
       <div className='playercard2'>
