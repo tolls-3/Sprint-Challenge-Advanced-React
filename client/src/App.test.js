@@ -10,6 +10,7 @@ it("renders without crashing", () => {
   expect(heading).toBeTruthy();
   expect(heading).toBeVisible();
 });
+
 it("renders players in app", () => {
   const app = rtl.render(<App />);
   app.getByText(/players/i);
