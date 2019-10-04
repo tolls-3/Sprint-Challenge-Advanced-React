@@ -1,22 +1,36 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import axios from "axios";
+import PlayersList from './Components/PlayersList'
 
-export default class App extends React.Component{
-  constructor(){
+const playersApi = `http://localhost:5000/api/players`;
+
+export default class App extends React.Component {
+  constructor() {
     super();
 
-    this.state={
-      players:[]
+    this.state = {
+      players: []
     };
   }
 
-  render(){
-    return(
-      <div>
-        
-      </div>
+  componentDidMount() {
+    //debugger;
+    axios.get(playersApi).then(res => {
+      this.setState({
+        players: res.data
+      });
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+  }
+
+  render() {
+    return (
+    <div>
+      <PlayersList players={this.state.players}/>
+    </div>
     )
   }
 }
-
-
