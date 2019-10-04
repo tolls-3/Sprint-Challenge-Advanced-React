@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import axios from "axios";
 import PlayersList from './Components/PlayersList'
+import NavBar from './Components/NavigationBar'
 
 const playersApi = `http://localhost:5000/api/players`;
 
@@ -29,6 +30,7 @@ export default class App extends React.Component {
   render() {
     return (
     <div>
+      <NavBar/>
       <PlayersList players={this.state.players}/>
     </div>
     )
