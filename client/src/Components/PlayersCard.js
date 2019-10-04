@@ -1,11 +1,11 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Icon } from "semantic-ui-react";
 
 
 const PlayersCard = ({ key, name, country, searches }) => {
   return (
     <div className="playercard" data-testid={key}>
-      <div>
+      <div className='playercard2'>
         <Card.Header>
           <h2>Name: {name}</h2>
         </Card.Header>
